@@ -1,3 +1,50 @@
----
-layout: home
----
+<!-- Web and Script Programming
+Assignment 2
+Phoebe Tam  100656375
+Tishiban Arunagiri 100660505 -->
+
+<!DOCTYPE html>
+<html ng-app="firstapp" ng-controller="ctrl">
+  <head>
+    <title>PnT Inc.</title>
+    <link rel="stylesheet" href="fancy.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="myJS.js"></script>
+  </head>
+
+  <body>
+    <div class="navbar">
+      <a href="index.html">Home</a>
+      <a href="pub.html">Publications</a>
+      <a href="press.html">Press</a>
+      <a href="research.html">Research Internet and Programs</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="group.html">Research Group</a>
+      <a href="contact.html">Contact</a>
+      <a href="login.html">Log In</a>
+    </div>
+
+    <div style="font-size: 30px" class="header">
+      Home
+    </div>
+
+    <div class="home">
+      <div class="row">
+        <div class="column left">
+          <img src="{{indexPic}}" style="margin: 20px; border-style: solid; border-color: black; width: 90%; height: 300px;"><br>
+          <p style="margin: 0px 20px 20px 20px; padding:0 0 0 0; border-style: solid; border-color: black; width: 90%; height: 300px; text-align: center; display: inline-block; ">
+            {{indexBio}}</p>
+        </div>
+        <div class="column right" >
+          <ul class="homepage"style="margin: 20px; border-style: none; border-color: black; height: 630px; width: 100%; overflow:auto; text-align: right;">
+            <h1 style="color: #063336;">News</h1>
+            <li ng-repeat="x in indexNews">{{x.date}} : <a href="{{x.link}}">{{x.label}}</a> {{x.news}}<br><br></li>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+
